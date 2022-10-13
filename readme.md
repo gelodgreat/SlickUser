@@ -16,3 +16,6 @@ My Works, please check them out
 1. [Github Page](https://github.com/gelodgreat)
 2. [Portfolio](https://angelodev.web.app/)
 3. [Playstore app releases](https://play.google.com/store/apps/dev?id=6473859083520963966&hl=en&gl=US)
+
+![image](https://user-images.githubusercontent.com/20021423/195546365-b30b69cf-a654-47b6-b053-5cb353a114dc.png)
+![image](https://user-images.githubusercontent.com/20021423/195546412-392c6137-87ee-4631-8da5-3b4c99584d25.png)
