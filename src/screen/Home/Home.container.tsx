@@ -23,8 +23,8 @@ const HomeContainer = (props: any) => {
   const getUsers = async () => {
     try {
       setLoading(true);
-      await dispatch(clearUsersList());
-      await dispatch(loadUsers());
+      dispatch(clearUsersList());
+      dispatch(loadUsers());
       setLoading(false);
     } catch (error) {
       console.log({error});

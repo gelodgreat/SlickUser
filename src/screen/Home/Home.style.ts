@@ -7,11 +7,9 @@ export const Container = styled.View`
 `;
 
 export const DataContainer = styled.TouchableOpacity`
-  padding: 8px;
-  border: 1px solid black;
-  border-radius: 8px;
-  margin: 8px 0px;
-  flex-direction: column;
+  flex: 1;
+  justify-content: 'center';
+  align-items: 'center';
 `;
 
 export const TextData = styled(Text)`

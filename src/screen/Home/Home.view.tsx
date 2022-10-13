@@ -5,8 +5,9 @@ import {HomeProps} from './Home.props';
 import {ActivityIndicator, TextInput} from 'react-native-paper';
 import {formatAddress} from 'utils/address';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import {FlatList} from 'react-native';
+import {FlatList, Image} from 'react-native';
 import {Users} from 'types/Users';
+import Slick from 'react-native-slick';
 
 const HomeScreen = (props: HomeProps) => {
   const {loading, onNavigateDetails, users} = props;
@@ -16,7 +17,10 @@ const HomeScreen = (props: HomeProps) => {
 
     return (
       <DataContainer onPress={() => onNavigateDetails(itemData)}>
-        <TextData>Name: {itemData.first_name}</TextData>
+        <Image
+          source={{uri: itemData.avatar}}
+          style={{width: '100%', height: '75%'}}
+        />
       </DataContainer>
     );
   };
@@ -25,12 +29,9 @@ const HomeScreen = (props: HomeProps) => {
     <Container>
       {loading && <ActivityIndicator animating />}
       {users && (
-        <FlatList
-          keyExtractor={() => Math.random().toString()}
-          data={users}
-          renderItem={renderItem}
-          onEndReachedThreshold={0.5}
-        />
+        <Slick showsButtons>
+          {users.map(user => renderItem({item: user}))}
+        </Slick>
       )}
     </Container>
   );

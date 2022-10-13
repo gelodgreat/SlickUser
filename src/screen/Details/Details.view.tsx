@@ -16,7 +16,7 @@ const DetailsScreen = (props: DetailsProps) => {
           <Row>
             <Image
               source={{uri: details.avatar}}
-              style={{width: 300, height: 300}}
+              style={{width: '100%', height: 400}}
             />
           </Row>
         )}
@@ -26,7 +26,7 @@ const DetailsScreen = (props: DetailsProps) => {
             Name: {details.first_name} {details.last_name}
           </Text>
         </Row>
-        <Row style={{marginTop: 24}}>
+        <Row style={{marginTop: 16}}>
           <Text>
             Address:{' '}
             {formatAddress(
@@ -38,8 +38,15 @@ const DetailsScreen = (props: DetailsProps) => {
             )}
           </Text>
         </Row>
-
-        <Row style={{marginTop: 48}} />
+        <Row style={{marginTop: 16}}>
+          <Text>Position: {details.employment.title}</Text>
+        </Row>
+        <Row style={{marginTop: 16}}>
+          <Text>Username: {details.username}</Text>
+        </Row>
+        <Row style={{marginTop: 16}}>
+          <Text>Subscription: {details.subscription.plan}</Text>
+        </Row>
       </ContentContainer>
     </Container>
   );
