@@ -8,8 +8,8 @@ export const Container = styled.View`
 
 export const DataContainer = styled.TouchableOpacity`
   flex: 1;
-  justify-content: 'center';
-  align-items: 'center';
+  justify-content: center;
+  align-items: center;
 `;
 
 export const TextData = styled(Text)`

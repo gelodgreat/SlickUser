@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import HomeScreen from './Home.view';
 import {useDispatch, useSelector} from 'react-redux';
 import {clearUsersList, currentUser, loadUsers} from 'redux/actions';
-import {useNavigation} from '@react-navigation/native';
+import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {Store} from 'types/Store';
 import {DETAILS_SCREEN} from 'const/screens';
 import {HomePrivateProps} from './Home.props';
@@ -23,7 +23,7 @@ const HomeContainer = (props: any) => {
   const getUsers = async () => {
     try {
       setLoading(true);
-      dispatch(clearUsersList());
+      await dispatch(clearUsersList());
       dispatch(loadUsers());
       setLoading(false);
     } catch (error) {
@@ -31,9 +31,11 @@ const HomeContainer = (props: any) => {
     }
   };
 
-  useEffect(() => {
-    getUsers();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      getUsers();
+    }, []),
+  );
 
   const generatedProps: HomePrivateProps = {
     users,

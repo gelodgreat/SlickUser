@@ -1,11 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Container, DataContainer, TextData} from './Home.style';
+import {Container, DataContainer} from './Home.style';
 import {HomeProps} from './Home.props';
-import {ActivityIndicator, TextInput} from 'react-native-paper';
-import {formatAddress} from 'utils/address';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import {FlatList, Image} from 'react-native';
+import {ActivityIndicator} from 'react-native-paper';
+import { Image} from 'react-native';
 import {Users} from 'types/Users';
 import Slick from 'react-native-slick';
 
@@ -16,7 +14,9 @@ const HomeScreen = (props: HomeProps) => {
     const itemData: Users = item;
 
     return (
-      <DataContainer onPress={() => onNavigateDetails(itemData)}>
+      <DataContainer
+        onPress={() => onNavigateDetails(itemData)}
+        key={itemData.uid}>
         <Image
           source={{uri: itemData.avatar}}
           style={{width: '100%', height: '75%'}}

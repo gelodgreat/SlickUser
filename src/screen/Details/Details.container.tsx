@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useEffect, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import DetailsScreen from './Details.view';
 import {useDispatch, useSelector} from 'react-redux';
 import {Store} from 'types/Store';
