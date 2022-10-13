@@ -1,5 +1,4 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json" /* Recommended React Native TSConfig base */,
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
@@ -15,13 +14,11 @@
     "baseUrl": "src",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": true
     // "incremental": true,
     // "strictPropertyInitialization": true,
     // "strictNullChecks": true,
     // "strictFunctionTypes": true
-    /* Completeness */
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": ["src"],
   "exclude": [

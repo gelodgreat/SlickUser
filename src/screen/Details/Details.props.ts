@@ -1,10 +1,7 @@
-import {Bookmarks} from 'types/Bookmarks';
-import {Brewery} from 'types/Brewery';
+import {Users} from 'types/Users';
 
 export interface DetailsPublicProps {}
 export interface DetailsPrivateProps {
-  details: Brewery;
-  bookmarks: Bookmarks[];
-  onBookmark: (bookmark: Bookmarks) => void;
+  details: Users;
 }
 export interface DetailsProps extends DetailsPublicProps, DetailsPrivateProps {}

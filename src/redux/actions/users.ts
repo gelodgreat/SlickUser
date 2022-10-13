@@ -10,14 +10,11 @@ export const updateUsersList = (users: any) => {
   };
 };
 
-export const loadUsers = (searchTerm: string, perPage: number) => {
+export const loadUsers = () => {
   return async (dispatch, getState) => {
     try {
       dispatch({type: 'LOAD_USERS_START'});
-      const encodedSearch = encodeURI(searchTerm || '');
-      const url = `${RANDOM_API_URL_USERS}?per_page=${perPage || 10}${
-        encodedSearch.length > 0 && `&by_name=${encodedSearch}`
-      }`;
+      const url = `${RANDOM_API_URL_USERS}`;
       const usersResults = await axios.get(url);
       dispatch({
         type: 'LOAD_USERS_SUCCESS',
