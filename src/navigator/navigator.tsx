@@ -1,11 +1,11 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeContainer from 'screen/Home/Home.container';
-import DetailsContainer from 'screen/Details/Details.container';
-import {DETAILS_SCREEN, HOME_SCREEN} from 'const/screens';
 import {TouchableOpacity, View} from 'react-native';
 import {Text} from 'react-native-paper';
+import HomeContainer from 'screen/Details';
+import DetailsContainer from 'screen/Details';
+import {DETAILS_SCREEN, HOME_SCREEN} from 'const/screens';
 
 const Stack = createNativeStackNavigator();
 

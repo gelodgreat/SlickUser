@@ -1,12 +1,12 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import HomeScreen from './Home.view';
 import {useDispatch, useSelector} from 'react-redux';
 import {clearUsersList, currentUser, loadUsers} from 'redux/actions';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {Store} from 'types/Store';
 import {DETAILS_SCREEN} from 'const/screens';
-import {HomePrivateProps, HomeProps} from './Home.props';
 import {Users} from 'types/Users';
+import HomeScreen from './Home.view';
+import {HomePrivateProps, HomeProps} from './Home.props';
 
 const HomeContainer = (props: HomeProps) => {
   const dispatch = useDispatch();
