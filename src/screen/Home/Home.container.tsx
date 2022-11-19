@@ -5,10 +5,10 @@ import {clearUsersList, currentUser, loadUsers} from 'redux/actions';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {Store} from 'types/Store';
 import {DETAILS_SCREEN} from 'const/screens';
-import {HomePrivateProps} from './Home.props';
+import {HomePrivateProps, HomeProps} from './Home.props';
 import {Users} from 'types/Users';
 
-const HomeContainer = (props: any) => {
+const HomeContainer = (props: HomeProps) => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const [loading, setLoading] = useState(false);

@@ -1,5 +1,5 @@
 export const currentUser = (detail: string | number) => {
-  return dispatch => {
+  return (dispatch: any) => {
     dispatch({
       type: 'SET_USER_DETAIL',
       detail,
